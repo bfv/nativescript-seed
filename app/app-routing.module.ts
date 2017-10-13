@@ -2,12 +2,15 @@ import { NgModule } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { Routes } from "@angular/router";
 
-import { MainPageComponent } from './pages/main/main-page.component';
+import { routes as homeRoutes } from './app.routes';
+import { routes as lazyRoutes } from './pages/lazy/lazy.routes';
 
 const routes: Routes = [
-    { path: "", redirectTo: "/main", pathMatch: "full" },
-    { path: "main", component: MainPageComponent },
-];
+    ...homeRoutes,
+    ...lazyRoutes
+]
+
+console.log('routes:', JSON.stringify(routes));
 
 @NgModule({
     imports: [NativeScriptRouterModule.forRoot(routes)],
