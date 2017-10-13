@@ -8,7 +8,7 @@
 android {  
   defaultConfig {  
     generatedDensities = []
-    applicationId = "org.nativescript.flussoseed"  
+    applicationId = "nl.flusso.flussoseed"  
   }  
   aaptOptions {  
     additionalParameters "--no-version-vectors"  
