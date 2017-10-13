@@ -192,6 +192,7 @@ function getPlugins(platform, env) {
         // Angular AOT compiler
         new AotPlugin(
             Object.assign({
+                tsConfigPath: "tsconfig.aot.json",
                 entryModule: resolve(__dirname, "app/app.module#AppModule"),
                 typeChecking: false
             }, ngToolsWebpackOptions)

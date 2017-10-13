@@ -3,6 +3,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "*": [
+        "./node_modules/tns-core-modules/*",
+        "./node_modules/*"
+      ],
       "application": ["node_modules/tns-core-modules/application"],
       "application-settings": ["node_modules/tns-core-modules/application-settings"],
       "camera": ["node_modules/tns-core-modules/camera"],
