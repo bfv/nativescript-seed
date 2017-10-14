@@ -7,7 +7,8 @@ import { MainPageComponent } from './pages/main/main-page.component';
 const routes: Routes = [
     { path: '', redirectTo: '/main', pathMatch: 'full' },
     { path: 'main', component: MainPageComponent },
-    { path: 'lazy', loadChildren: './pages/lazy/lazy.module#LazyModule' }
+    { path: 'lazy', loadChildren: './pages/lazy/lazy.module#LazyModule' },
+    { path: 'login', loadChildren: './pages/login/login.module#LoginModule' },
 ];
 
 @NgModule({

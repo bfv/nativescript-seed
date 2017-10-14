@@ -18,4 +18,8 @@ export class MainPageComponent implements OnInit {
     loadlazy() {
         this.router.navigateByUrl('/lazy');
     }
+
+    login() {
+        this.router.navigateByUrl('/login');
+    }
 }
