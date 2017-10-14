@@ -4,6 +4,8 @@ import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { AppCommonModule } from './common/app-common.module';
+
 import { MainPageComponent } from './pages/main/main-page.component';
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -18,6 +20,7 @@ import { MainPageComponent } from './pages/main/main-page.component';
     imports: [
         NativeScriptModule,
         AppRoutingModule,
+        AppCommonModule,
     ],
     declarations: [
         AppComponent,
