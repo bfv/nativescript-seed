@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { NativeScriptRouterModule } from 'nativescript-angular/router';
 import { Routes } from '@angular/router';
 
-import { routes as homeRoutes } from './app.routes';
-import { routes as lazyRoutes } from './pages/lazy/lazy.routes';
+import { MainPageComponent } from './pages/main/main-page.component';
 
 const routes: Routes = [
-    ...homeRoutes,
-    ...lazyRoutes
+    { path: '', redirectTo: '/main', pathMatch: 'full' },
+    { path: 'main', component: MainPageComponent },
+    { path: 'lazy', loadChildren: './pages/lazy/lazy.module#LazyModule' }
 ];
 
 @NgModule({
-    imports: [NativeScriptRouterModule.forRoot(routes)],
-    exports: [NativeScriptRouterModule]
+    imports: [ NativeScriptRouterModule.forRoot(routes) ],
+    exports: [ NativeScriptRouterModule ]
 })
 export class AppRoutingModule { }

@@ -1,4 +1,5 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA, NgModuleFactoryLoader } from '@angular/core';
+import { NSModuleFactoryLoader } from 'nativescript-angular/router';
 import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,14 +17,14 @@ import { MainPageComponent } from './pages/main/main-page.component';
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
+        AppRoutingModule,
     ],
     declarations: [
         AppComponent,
         MainPageComponent,
     ],
     providers: [
-
+        { provide: NgModuleFactoryLoader, useClass: NSModuleFactoryLoader },
     ],
     schemas: [
         NO_ERRORS_SCHEMA
