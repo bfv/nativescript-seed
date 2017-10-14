@@ -1,11 +1,17 @@
 {
-  "description": "NativeScript Application",
-  "license": "SEE LICENSE IN <your-license-filename>",
+  "description": "bfv.io NativeScript Seed",
+  "license": "MIT",
   "readme": "NativeScript Application",
-  "repository": "<fill-your-repository-here>",
+  "repository": { 
+    "type": "git",
+    "url": "https://github.com/bfv/nativescript-seed"
+  },
   "nativescript": {
     "id": "io.bfv.nativescriptseed",
     "tns-android": {
+      "version": "3.2.0"
+    },
+    "tns-ios": {
       "version": "3.2.0"
     }
   },
